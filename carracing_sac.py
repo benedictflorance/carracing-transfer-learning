@@ -7,11 +7,12 @@ from stable_baselines3.common.vec_env.dummy_vec_env import DummyVecEnv
 from stable_baselines3.common.vec_env import VecTransposeImage
 from stable_baselines3.common.monitor import Monitor
 from torch import nn
-
+import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument('--logdir', default="/home/benedict/car_racing/sac/")
 parser.add_argument('--game_mode', default=None)
-parser.add_argument('--map_id', default=None)
+parser.add_argument('--train_map_id', default=None)
+parser.add_argument('--eval_map_id', default=None)
 parser.add_argument('--load_path', default=None)
 args = parser.parse_args()
 
@@ -22,8 +23,8 @@ def create_env(env):
     env = DummyVecEnv([lambda: env])
     env = VecTransposeImage(env)    
     return env 
-train_env = create_env(gym.make("CarRacing-v1", game_mode=args.game_mode, map_id=args.map_id))
-eval_env = create_env(gym.make("CarRacing-v1", game_mode=args.game_mode, map_id=args.map_id))
+train_env = create_env(gym.make("CarRacing-v1", game_mode=args.game_mode, map_id=int(args.train_map_id)))
+eval_env = create_env(gym.make("CarRacing-v1", game_mode=args.game_mode, map_id=int(args.eval_map_id)))
 new_logger = configure(log_dir, ["stdout", "csv", "tensorboard"])
 checkpoint_callback = CheckpointCallback(save_freq=1e4, save_path=log_dir)
 eval_callback = EvalCallback(eval_env, best_model_save_path=log_dir+'/best_model/', log_path=log_dir, eval_freq=1e4)
