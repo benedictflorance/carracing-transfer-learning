@@ -9,10 +9,11 @@ University of Pennsylvania, Spring 2022
 This repo contains scripts to train various transfer learning algorithms as well as to visualize the trained transfer learning algorithms.
 
 ## Contributions
+
 For this project, the individual contributions were as follows:
-- Benedict: trained transfer learning algorithms and selected the best models
-- Richard: parameter tuning and analysis on each model's performance
-- Wesley: running and development of best model visualizations
+- Benedict: literature review, customized and trained base and transfer learning RL algorithms (Dreamerv2, SB3) and selected the best models/obtained plots, report writing
+- Richard: literature review, parameter tuning for customized Carracing gym environments, and analysis on each model's performance, report writing
+- Wesley: literature review, customizing Carracing gym environments, running and development of best model visualizations, report writing
 
 
 ## Training the models
