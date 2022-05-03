@@ -16,7 +16,7 @@ os.makedirs(log_dir, exist_ok=True)
 eval_env = gym.make("CarRacing-v1", game_mode=None, map_id=int(args.eval_map_id))
 env_wrapper = gym.wrappers.RecordVideo(eval_env, './videos/'+args.game_mode+'/'+args.model)
 
-model = DDPG.load(path='C:\\Users\\Wesley Yee\\Documents\\Github\\carracing-transfer-learning\\'+args.game_mode+'\\best_model_'+args.model, env=eval_env)
+model = DDPG.load(path='.\\'+args.game_mode+'\\best_model_'+args.model, env=eval_env)
 
 obs = env_wrapper.reset()
 
