@@ -8,6 +8,13 @@ University of Pennsylvania, Spring 2022
 
 This repo contains scripts to train various transfer learning algorithms as well as to visualize the trained transfer learning algorithms.
 
+## Contributions
+For this project, the individual contributions were as follows:
+- Benedict: trained transfer learning algorithms and selected the best models
+- Richard: parameter tuning and analysis on each model's performance
+- Wesley: running and development of best model visualizations
+
+
 ## Training the models
 We utilized 3 model-free transfer learning algorithms for this project: DDPG, PPO, SAC. The 3 scripts labeled 
 ```sh
