@@ -8,6 +8,10 @@ University of Pennsylvania, Spring 2022
 
 This repo contains scripts to train various transfer learning algorithms as well as to visualize the trained transfer learning algorithms.
 
+## Other Repositories:
+- [Dreamerv2 Car Racing](https://github.com/benedictflorance/dreamerv2_carracing)
+- [Customized Car Racing Gym Environment](https://github.com/benedictflorance/gym)
+
 ## Contributions
 
 For this project, the individual contributions were as follows:
